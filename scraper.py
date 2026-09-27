@@ -22,14 +22,14 @@ while True:
         product_url = product_node.css_first('div.card-head > a.card-head-url')
         availability = product_node.css_first('div.card-head > div.availability > div.badge')
 
-        car = {
+        product = {
             'Product Name': product_name.attributes.get('title') if product_name is not None else None,
             'Price': int(''.join(re.findall(r'\d+', price.text().strip()))) if price is not None else None,
             'Currency': currency.attributes.get('content') if currency is not None else None,
             'Availability': availability.text().strip() if availability is not None else None,
             'Product URL': product_url.attributes.get('href') if product_url is not None else None
         }
-        products.append(car)
+        products.append(product)
 
     next_page = tree.css_first('a.page-link.next')
 
