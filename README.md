@@ -50,20 +50,25 @@ The CSV contains the following fields:
 
 In terminal:
 
+'''bash
 git clone https://github.com/Donia-Yaser/competitor-price-tracker.git
 
 2. Navigate into the project directory:
 
+'''bash
 cd competitor-price-tracker
 
 3. Install the required dependencies:
 
+'''bash
 pip install -r requirements.txt
 
 4. Run the scraper
 
+'''bash
 python scraper.py
 
 5. The scraped data will be saved as:
 
+'''bash
 products.csv
