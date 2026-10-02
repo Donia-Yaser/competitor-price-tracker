@@ -24,7 +24,7 @@ while True:
 
         product = {
             'Product Name': product_name.attributes.get('title') if product_name is not None else None,
-            'Price': int(''.join(re.findall(r'\d+', price.text().strip()))) if price is not None else None,
+            'Price': int(re.sub(r'[^0-9]', '', price.text())) if price is not None else None,
             'Currency': currency.attributes.get('content') if currency is not None else None,
             'Availability': availability.text().strip() if availability is not None else None,
             'Product URL': product_url.attributes.get('href') if product_url is not None else None

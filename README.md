@@ -1,4 +1,4 @@
-# Competitor Price Tracker
+# Multi-Page Product Data Scraper
 
 -> A Python web scraping project that extracts product information across multiple pages and saves the collected data to a CSV file.
 
